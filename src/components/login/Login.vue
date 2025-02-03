@@ -40,7 +40,7 @@ export default {
       }
 
       try {
-        const response = await axios.get("http://localhost:3000/users", {
+        const response = await axios.get("https://stemis-application.onrender.com/users", {
           params: { email: this.email },
         });
         const user = response.data.find(

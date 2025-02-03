@@ -37,7 +37,7 @@ export default {
     }),
     async getServices() {
       try {
-        const response = await axios.get("http://localhost:3000/services");
+        const response = await axios.get("https://stemis-application.onrender.com/services");
         this.services = response.data;
       } catch (error) {
         console.error(error);

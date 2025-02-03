@@ -82,7 +82,7 @@ export default {
     },
     async setBusyTimes() {
       try {
-        const response = await axios.get("http://localhost:3000/schedulings");
+        const response = await axios.get("https://stemis-application.onrender.com/schedulings");
         const schedulings = response.data;
 
         const busyTimes = schedulings

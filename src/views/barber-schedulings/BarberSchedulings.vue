@@ -52,7 +52,7 @@ export default {
   methods: {
     async getBarberSchedulings() {
       try {
-        const response = await axios.get("http://localhost:3000/schedulings");
+        const response = await axios.get("https://stemis-application.onrender.com/schedulings");
         const barberID = this.user.id;
         const barberSchedulingsSchedulings = response.data.filter(
           (scheduling) => scheduling.barber.id === barberID

@@ -52,12 +52,12 @@ export default {
   },
   methods: {
     async getServices() {
-      const response = await axios.get("http://localhost:3000/services");
+      const response = await axios.get("https://stemis-application.onrender.com/services");
       this.services = response.data;
     },
     async removeCard(card) {
       try {
-        await axios.delete(`http://localhost:3000/services/${card}`);
+        await axios.delete(`https://stemis-application.onrender.com/services/${card}`);
 
         this.services = this.services.filter((service) => service.id !== card);
       } catch (error) {
@@ -75,7 +75,7 @@ export default {
             duration: this.duration,
           };
 
-          await axios.post("http://localhost:3000/services", service);
+          await axios.post("https://stemis-application.onrender.com/services", service);
           alert("Serviço adicionado!");
 
           this.name = "";

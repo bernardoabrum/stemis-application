@@ -36,7 +36,7 @@ export default {
     async sendScheduling() {
       try {
         await axios.post(
-          "http://localhost:3000/schedulings",
+          "https://stemis-application.onrender.com/schedulings",
           this.schedulingInfo
         );
         alert("Agendado com sucesso!");

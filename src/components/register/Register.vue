@@ -35,7 +35,7 @@ export default {
       }
 
       try {
-        const response = await axios.get("http://localhost:3000/users");
+        const response = await axios.get("https://stemis-application.onrender.com/users");
         const existingUser = response.data.find(
           (user) => user.email === this.email
         );
@@ -51,7 +51,7 @@ export default {
           password: this.password,
         };
 
-        await axios.post("http://localhost:3000/users", newUser);
+        await axios.post("https://stemis-application.onrender.com/users", newUser);
         alert("Usuário registrado com sucesso!");
 
         this.name = "";

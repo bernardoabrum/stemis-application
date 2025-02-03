@@ -57,7 +57,7 @@ export default {
   methods: {
     async getUserSchedulings() {
       try {
-        const response = await axios.get("http://localhost:3000/schedulings");
+        const response = await axios.get("https://stemis-application.onrender.com/schedulings");
         const userID = this.user.id;
         const userSchedulings = response.data.filter(
           (scheduling) => scheduling.client.id === userID
@@ -80,7 +80,7 @@ export default {
     },
     async deleteScheduling(schedulingId) {
       try {
-        await axios.delete(`http://localhost:3000/schedulings/${schedulingId}`);
+        await axios.delete(`https://stemis-application.onrender.com/schedulings/${schedulingId}`);
         this.schedulings = this.schedulings.filter(
           (scheduling) => scheduling.id !== schedulingId
         );

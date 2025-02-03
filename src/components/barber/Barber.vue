@@ -37,7 +37,7 @@ export default {
 
     async getBarbers() {
       try {
-        const response = await axios.get("http://localhost:3000/users");
+        const response = await axios.get("https://stemis-application.onrender.com/users");
         this.barbers = response.data.filter((user) => user.isBarber === true);
       } catch (error) {
         console.error(error);
